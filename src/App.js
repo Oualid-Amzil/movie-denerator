@@ -1,24 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { useSelector } from "react-redux";
+import Home from "./pages/Home";
+import Details from "./pages/Details";
+import Footer from "./components/Footer";
+import Movies from "./pages/Movies";
+import Nav from "./components/Nav";
+import MobileNav from "./components/MobileNav";
+import NotFound from "./pages/NotFound";
+
+import "./App.css";
 
 function App() {
+  const isShown = useSelector((state) => state.ui.isShown);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <BrowserRouter>
+        {isShown && <MobileNav />}
+        <Nav />
+
+        <Routes>
+          <Route path="/" element={<Navigate to="/home" />}></Route>
+          <Route path="/home" element={<Home />}></Route>
+          <Route path="/movies" element={<Movies />}>
+            <Route path=":title" element={<Movies />}></Route>
+          </Route>
+          {/* <Route path="/movies/:title" element={<Movies />}></Route> */}
+          <Route path="/details" element={<Details />}></Route>
+          <Route path="*" element={<NotFound />}></Route>
+        </Routes>
+        <Footer />
+      </BrowserRouter>
+    </>
   );
 }
 

@@ -1,0 +1,95 @@
+.nav {
+  position: fixed;
+  width: 100%;
+  padding: 40px;
+  z-index: 20;
+  display: flex;
+  overflow-x: hidden;
+}
+
+.nav__logo {
+  position: fixed;
+  color: white;
+  left: 80px;
+  top: 15px;
+}
+
+.nav__logo h1 {
+  font-size: 40px;
+}
+
+.nav__logo h1 .title {
+  color: red;
+  font-size: 45px;
+}
+
+.nav__list {
+  position: fixed;
+  top: 18px;
+  right: 80px;
+}
+
+.nav__list ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  margin-right: 80px;
+  padding: 0;
+}
+
+.nav__list ul li {
+  padding: 6px;
+  margin-right: 20px;
+  font-weight: 600;
+  font-size: 22px;
+  position: relative;
+  transition: all 0.05s ease-in;
+}
+
+.nav__list ul li:hover {
+  transform: scale(1.08);
+}
+
+.nav__list ul li:hover a::after {
+  width: 100%;
+}
+
+.active {
+  border-bottom: 2px solid red;
+}
+
+.nav__list ul li:hover .active {
+  border-bottom: 0;
+}
+
+.nav__list a,
+.drop__list a {
+  text-decoration: none;
+  color: white;
+}
+
+.nav__list a::after {
+  content: "";
+  background-color: white;
+  height: 2px;
+  width: 0;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transition: all 0.25s ease;
+}
+
+.nav__list a:hover {
+  color: red;
+}
+
+.nav__black {
+  background-color: #111;
+  opacity: 0.9;
+}
+
+@media (max-width: 920px) {
+  .nav {
+    display: none;
+  }
+}

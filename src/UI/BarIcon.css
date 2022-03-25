@@ -1,0 +1,15 @@
+.menu__icon {
+  color: white;
+  cursor: pointer;
+  position: absolute;
+  z-index: 5;
+  top: 10px;
+  right: 10px;
+  opacity: 0;
+}
+
+@media (max-width: 919px) {
+  .menu__icon {
+    opacity: 1;
+  }
+}
