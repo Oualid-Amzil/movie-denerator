@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/movie-generator/static/css/main.7f1556ea.css",
-    "main.js": "/movie-generator/static/js/main.131bd670.js",
+    "main.js": "/movie-generator/static/js/main.2c072b4d.js",
     "static/media/samuel-regan-asante-wMkaMXTJjlQ-unsplash.jpg": "/movie-generator/static/media/samuel-regan-asante-wMkaMXTJjlQ-unsplash.965bcd9be9f39245bf59.jpg",
     "static/media/jason-dent-SnXIF8_2oPw-unsplash.jpg": "/movie-generator/static/media/jason-dent-SnXIF8_2oPw-unsplash.834d22babe621da768d7.jpg",
     "static/media/slick.svg": "/movie-generator/static/media/slick.2630a3e3eab21c607e21.svg",
@@ -10,10 +10,10 @@
     "static/media/slick.woff": "/movie-generator/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/movie-generator/index.html",
     "main.7f1556ea.css.map": "/movie-generator/static/css/main.7f1556ea.css.map",
-    "main.131bd670.js.map": "/movie-generator/static/js/main.131bd670.js.map"
+    "main.2c072b4d.js.map": "/movie-generator/static/js/main.2c072b4d.js.map"
   },
   "entrypoints": [
     "static/css/main.7f1556ea.css",
-    "static/js/main.131bd670.js"
+    "static/js/main.2c072b4d.js"
   ]
 }
